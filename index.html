@@ -25,7 +25,7 @@
         }
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1400px; /* Ko'proq kartochka sig'ishi uchun kengroq */
             padding: 20px;
             text-align: center;
         }
@@ -100,27 +100,28 @@
             color: #cbd5e1;
             margin-bottom: 40px;
         }
-        /* Grid Oynasi - Ekran kengligiga mos va yonma-yon turuvchi */
+        /* Grid Oynasi - Chiroyli, teng balandlik va yonma-yon joylashuv uchun */
         .wishes-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Har bir kartochka kamida 280px, yonma-yon *repeat* qiladi */
+            gap: 20px; /* Zichroq joylashish uchun gapni kamaytirdim */
             padding: 10px;
             width: 100%;
         }
         .wish-card {
             background: rgba(255, 255, 255, 0.03);
             border-left: 5px solid #38bdf8;
-            padding: 25px;
+            padding: 20px; /* padding'ni zichroq qildim */
             border-radius: 0 15px 15px 0;
             text-align: left;
             transition: 0.3s;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             border-right: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex;
+            display: flex; /* Kontent zich bo'lishi uchun flex ishlatildi */
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-between; /* Ism doimo pastda turishi uchun */
+            height: 100%; /* Balandligi teng bo'lishi uchun */
         }
         .wish-card:hover {
             transform: translateY(-5px);
@@ -133,14 +134,15 @@
             font-size: 0.95rem;
             line-height: 1.6;
             white-space: pre-line;
+            margin-bottom: 15px; /* Matn va ism orasida joy */
         }
         .wish-card .author {
-            margin-top: 15px;
             font-weight: 600;
             font-size: 0.85rem;
             color: #38bdf8;
             text-transform: uppercase;
             letter-spacing: 1px;
+            align-self: flex-end; /* Ism pastda va o'ngda turadi */
         }
         @keyframes pulse {
             0% { transform: scale(1); }
@@ -170,11 +172,6 @@
             </div>
 
             <div class="wish-card">
-                <p>"Assalomu alaykum, ustoz. Tug'ilgan kunlariz bilan tabriklayman. Ilmingiz bundanda ziyoda bolsin, qadrizga yetadigan o'quvchilariz koop bolsin. Nimaiki niyat maqsadlariz boʻlsa barchasiga yetishib yuring. Iyul-avgust oylarida 8 lar yomg'irida qolib keting, ilohim."</p>
-                <div class="author">- Jalilova Sevinch</div>
-            </div>
-
-            <div class="wish-card">
                 <p>"Assalomu alaykum ustoz, tugʻilgan kuningiz bilan tabriklaymiz. Nimaki niyat qilgan bo'lsangiz hammasiga erishish nasib qilsin. Uzoq va mazmunli umr, sogʻliq, baxt tilayman. Berayotgan bilimlaringiz, sarflayotgan vaqtingiz uchun kattakon rahmat. Sizdek e'tiborli, erinmasdan hamma oʻquvchilariga vaqt ajratadigan ustozlar kam. Ilmingiz va martabangiz bundanda ziyoda bo'lsin. Yuzingizni yorug' qilish hammamizga nasib qilsin. Tugʻilgan kuningiz muborak boʻlsin, ustoz!"</p>
                 <div class="author">- Sharopova Umida</div>
             </div>
@@ -182,11 +179,6 @@
             <div class="wish-card">
                 <p>"Happy Birthday, Teacher!\nWishing you good health, a long life, happiness, and great success in all your endeavors.\nWe sincerely thank you for your endless hard work, patience, and dedication to helping us learn and achieve our goals. May all your efforts be rewarded with outstanding results, and may all your students achieve IELTS scores of 8+ and make you proud.\nOnce again, happy birthday! We wish you a wonderful year filled with joy, success, and many achievements."</p>
                 <div class="author">- Ismoil</div>
-            </div>
-
-            <div class="wish-card">
-                <p>"Qadrli ustozim\nSizni bugungi quvonchli kuningiz bilan samimiy tabriklayman. Oilangiz , yaqinlaringiz va bizlar uchun doim sog' salomat boling. \nKelgusi ishlaringizga muvaffaqqiyat tilab qolaman.\nBizlar uchun o'zingizni ayamasdan tunni tun tongni tong demasdan qilayotgan mehnatingiz, jasoratingizni qancha e'tirof qilsakda kam. Siz biz o'quvchilaringiz uchun nafaqat ustoz , aka o'rnida aka, hayotda to'g'ri yol korsatuvchi , bizlarga o'rnak boluvchi insonlardan birisiz. Siz bizlarga muntazam intizom, qat'iyat , qanday ishlash, qanday o'qish kerakligini o'rgatdingiz."</p>
-                <div class="author">- Dr.Pirmatov</div>
             </div>
 
             <div class="wish-card">
@@ -215,7 +207,7 @@
             </div>
 
             <div class="wish-card">
-                <p>"Assalomu alaykum ustoz!\nSizni tavallud ayyomingiz bilan chin qalbimdan samimiy muborakbod etaman. Hayot yo‘lingiz doimo sharaf, baraka va muvaffaqiyatlarga to‘la bo‘lsin. Sizga mustahkam sog‘lik, uzoq umr, qalb xotirjamligi hamda oilaviy baxt-saodat tilayman.\nSiz nafaqat ingliz tilini, balki insoniylik, sabr, intilish va katta maqsad sari qat’iyat bilan harakat qilishni ham o‘rgatayotgan ustozsiz. Sizning bilimingiz, fidoyiligingiz va har bir o‘quvchiga bergan e’tiboringiz ko‘plab yoshlar uchun ilhom manbaidir.\nAlloh taolo ilm va mehnatingizga yanada baraka bersin. Doimo el orasida hurmatli, shogirdlar qalbida esa unutilmas ustoz bo‘lib yuring. Sizdek ustozlar jamiyatning eng katta boyligidir. Tug‘ilgan kuningiz muborak bo‘lsin, ustoz!"</p>
+                <p>"Assalomu alaykum ustoz!\nSizni tavallud ayyomingiz bilan chin qalbimdan samimiy muborakbod etaman. Hayot yo‘lingiz doimo sharaf, baraka va muvaffaqiyatlarga to‘la bo‘lsin. Sizga mustahkam sog‘lik, uzoq umr, qalb xotirjamligi hamda oilaviy baxt-saodat tilayman.\nSiznafaqat ingliz tilini, balki insoniylik, sabr, intilish va katta maqsad sari qat’iyat bilan harakat qilishni ham o‘rgatayotgan ustozsiz. Sizning bilimingiz, fidoyiligingiz va har bir o‘quvchiga bergan e’tiboringiz ko‘plab yoshlar uchun ilhom manbaidir.\nAlloh taolo ilm va mehnatingizga yanada baraka bersin. Doimo el orasida hurmatli, shogirdlar qalbida esa unutilmas ustoz bo‘lib yuring. Sizdek ustozlar jamiyatning eng katta boyligidir. Tug‘ilgan kuningiz muborak bo‘lsin, ustoz!"</p>
                 <div class="author">- Farrux Xabidullayev</div>
             </div>
 
@@ -235,11 +227,6 @@
             </div>
 
             <div class="wish-card">
-                <p>"Assalomu alaykum Davronbek ustoz, tavallud kuningiz bilan tabrikliman. Ilohim alloh ilmingizni bundanda ziyoda va mustahkam qilsin. Va bundanda qadringiz va hurmatingiz baland bo'lsin\nOta-onangiz va oilangiz baxtiga doimo sog' salomat va baxtli bo'lishngiz tilakdoshiman. Barcha shogirdlar uchun qilgan say harkatlaringiz o'z samarasini berishi, va yaxshi natijalarga erishishingizni astoydil tilakdoshiman. Shunindek, bergan ilimlaringizni oqlab va korsatgan to'gri yollaringizga ergashib sizni muvofiq va most shogirdlaringiz qatorida bo'lishni va birgalikda, yuqori natijalar qilishni maqsad qilganman, bu yo'lda Alloh barchamizni qo'llasin va hamroh bo'lsin. Shukrona kuningiz muborak bo'lsin ustoz umringiz ziyoda bo'lsin!"</p>
-                <div class="author">- Sherali</div>
-            </div>
-
-            <div class="wish-card">
                 <p>"Happy birthday, teacher! 🎂🎉\nYou are not only an English teacher but also a truly caring and dedicated person who always puts your students first. You always give your best in every lesson and do everything you can to help us improve, not only in English but also in life. Thank you for your patience, kindness, and endless dedication. We are incredibly lucky to have a teacher like you. ✨"</p>
                 <div class="author">- Boboqulova Farangiz</div>
             </div>
@@ -252,11 +239,6 @@
             <div class="wish-card">
                 <p>"Assalomu alaykum, teacher. Tavallud ayyomingiz muborak boʻlsin. Sizning halolligingiz, sabringiz va oʻquvchilaringiz uchun doim qaygʻurishingiz meni lol qoldirdi. Bu xislat barchada ham mavjud emas. Sizga oilaviy baxt va xotirjamlik tilayman. Alloh ilmingizni yanada ziyoda qilsin."</p>
                 <div class="author">- Xushnoza</div>
-            </div>
-
-            <div class="wish-card">
-                <p>"Happy Birthday! Thank you for your dedication and support. I wish you happiness, good health, and continued success in both your personal and professional life. Thank you for helping me improve my English and for always encouraging."</p>
-                <div class="author">- Xusan</div>
             </div>
 
             <div class="wish-card">
@@ -275,7 +257,7 @@
             </div>
 
             <div class="wish-card">
-                <p>"Ассалому алайкум биз учун жонкуяр ва меҳрибон бўлган устозимиз! Уммат бўлган кунингиз муборак бўлсин. Қарши олган ёшингиз сиз учун хайрли бўлсин, Аллоҳ илмингизга, ризқингизга ҳамда ҳаётингизга барокатлар ато этсин. Ота-онангиз ва фарзандларингиз бахтига доимо соғ-саломат бўлинг. Мартабангиз бунданда юқори бўлиб, ҳар онингиз қувончга тўлсин. Нимаики орзу-мақсадларингиз бўлса, битта қўймай эришишингизни тилаб қоламан. Яна бир бор Happy birthday, teacher! 🎉✨"</p>
+                <p>"Ассалому алайкум биз учун жонкуяр ва меҳрибон бўлган устозимиз! Уммат бўлган кунингиз муборак бўлсин. Қарши олган ёшингиз сиз учун хайрли бўлсин, Аллоҳ илмингизга, ризқингизга ҳамда ҳаётингизга барокатlar ато этсин. Ота-онангиз ва фарзандларингиз бахтига доимо соғ-саломат бўлинг. Мартабангиз бунданда юқори бўлиб, ҳар онингиз қувончга тўлсин. Нимаики орзу-мақсадларингиз бўлса, битта қўймай эришишингизни тилаб қоламан. Яна bir bor Happy birthday, teacher! 🎉✨"</p>
                 <div class="author">- Marjona</div>
             </div>
 
@@ -320,20 +302,4 @@
 
               const particleCount = 50 * (timeLeft / duration);
               confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
-              confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
-            }, 250);
-
-            document.getElementById('loginBox').style.display = 'none';
-            const wishesBox = document.getElementById('wishesBox');
-            wishesBox.style.display = 'block';
-            setTimeout(() => {
-                wishesBox.style.opacity = '1';
-            }, 50);
-        } else {
-            alert("Please enter a name! 😊");
-        }
-    }
-</script>
-
-</body>
-</html>
+              confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7,
